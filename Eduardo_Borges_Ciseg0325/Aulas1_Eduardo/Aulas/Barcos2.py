@@ -22,25 +22,17 @@ class Barco:
             self.farois = False
             self.nos = 0
             print("O barco foi desligado.")
-        else:
-            print("O barco já está desligado.")
-
+        
     def ligarFarois(self):
         if self.ligado:
             if not self.farois:
                 self.farois = True
                 print("Faróis ligados.")
-            else:
-                print("Os faróis já estão ligados.")
-        else:
-            print("Não podes ligar os faróis com o barco desligado.")
 
     def desligarFarois(self):
         if self.farois:
             self.farois = False
             print("Faróis desligados.")
-        else:
-            print("Os faróis já estão desligados.")
 
     def Acelera(self, nivel):
         if self.ligado:
@@ -50,8 +42,6 @@ class Barco:
                 self.nos += 5
             if nivel == 3:
                 self.nos += 10
-        else:
-            print("Não podes acelerar com o barco desligado.")
 
     def Abranda(self, nivel):
         if self.ligado:
@@ -61,10 +51,7 @@ class Barco:
                 self.nos = max(0, self.nos - 5)
             if nivel == 3:
                 self.nos = max(0, self.nos - 10)
-        else:
-            print("Não podes abrandar com o barco desligado.")
 
-# Teste básico
 Barco1 = Barco("Yamaha", "200cv", 2024, 0)
 
 Barco1.ligarBarco()
